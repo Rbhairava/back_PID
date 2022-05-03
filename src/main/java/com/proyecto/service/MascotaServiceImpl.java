@@ -19,14 +19,10 @@ public class MascotaServiceImpl implements MascotaService {
 		return Repository.findAll();
 	}
 
+
 	@Override
-	public Mascota insertMascota(Mascota obj) {
+	public Mascota insertaActualizaMascota(Mascota obj) {
 		return Repository.save(obj);
 	}
-
-//	@Override
-//	public Mascota insertaActualizaMascota(Mascota obj) {
-//		return Repository.save(obj);
-//	}
 
 }
