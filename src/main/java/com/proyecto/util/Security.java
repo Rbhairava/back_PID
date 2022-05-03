@@ -11,7 +11,6 @@ public class Security {
 	public static final String FORBIDDEN_MESSAGE = "Debes iniciar sesión para acceder a esta página";
 	public static final String ACCESS_DENIED_MESSAGE = "Usted no tiene permiso para acceder a esta página";
 	public static final String OPTIONS_HTTP_METHOD = "OPTIONS";
-	public static final String[] PUBLIC_URLS = { "/auth/**" };
-	public static final String[] PRIVATE_URLS = { "/api/user/list", "/api/user/add" };
+	public static final String[] PUBLIC_URLS = { "/auth/**", "/url/propietario" };
 
 }
