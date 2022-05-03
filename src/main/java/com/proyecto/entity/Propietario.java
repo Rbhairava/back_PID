@@ -19,8 +19,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
-@Setter
 @Entity
 @Table(name= "tb_propietario")
 public class Propietario {
@@ -45,4 +43,70 @@ public class Propietario {
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "cod_usuario")
 	private User usuario;
+
+	public int getCod_propietario() {
+		return cod_propietario;
+	}
+
+	public void setCod_propietario(int cod_propietario) {
+		this.cod_propietario = cod_propietario;
+	}
+
+	public String getNom_propietario() {
+		return nom_propietario;
+	}
+
+	public void setNom_propietario(String nom_propietario) {
+		this.nom_propietario = nom_propietario;
+	}
+
+	public String getDni_propietario() {
+		return dni_propietario;
+	}
+
+	public void setDni_propietario(String dni_propietario) {
+		this.dni_propietario = dni_propietario;
+	}
+
+	public int getEdad_propietario() {
+		return edad_propietario;
+	}
+
+	public void setEdad_propietario(int edad_propietario) {
+		this.edad_propietario = edad_propietario;
+	}
+
+	public String getCorreo_propietario() {
+		return correo_propietario;
+	}
+
+	public void setCorreo_propietario(String correo_propietario) {
+		this.correo_propietario = correo_propietario;
+	}
+
+	public Date getFecha_incio_contrato() {
+		return fecha_incio_contrato;
+	}
+
+	public void setFecha_incio_contrato(Date fecha_incio_contrato) {
+		this.fecha_incio_contrato = fecha_incio_contrato;
+	}
+
+	public Date getFecha_fin_contrato() {
+		return fecha_fin_contrato;
+	}
+
+	public void setFecha_fin_contrato(Date fecha_fin_contrato) {
+		this.fecha_fin_contrato = fecha_fin_contrato;
+	}
+
+	public User getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(User usuario) {
+		this.usuario = usuario;
+	}
+	
+	
 }

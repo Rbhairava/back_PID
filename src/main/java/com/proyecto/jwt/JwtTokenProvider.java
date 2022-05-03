@@ -7,6 +7,8 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 import org.springframework.security.core.GrantedAuthority;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Component;
@@ -18,6 +20,8 @@ import lombok.extern.slf4j.Slf4j;
 @Component
 @Slf4j
 public class JwtTokenProvider {
+	
+	private final static Logger log = LoggerFactory.getLogger(JwtTokenProvider.class);
 	
 	@Value("${jwt.secret}")
 	private String secret;

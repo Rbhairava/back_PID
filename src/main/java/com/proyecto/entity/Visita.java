@@ -19,9 +19,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 
-
-@Getter
-@Setter
 @Entity
 @Table(name = "tb_visita")
 public class Visita {
@@ -52,4 +49,54 @@ public class Visita {
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "cod_propietario")
 	private Propietario propietario;
+
+	public int getCod_visita() {
+		return cod_visita;
+	}
+
+	public void setCod_visita(int cod_visita) {
+		this.cod_visita = cod_visita;
+	}
+
+	public Date getFecha_reg_visita() {
+		return fecha_reg_visita;
+	}
+
+	public void setFecha_reg_visita(Date fecha_reg_visita) {
+		this.fecha_reg_visita = fecha_reg_visita;
+	}
+
+	public Date getFecha_llegada_visita() {
+		return fecha_llegada_visita;
+	}
+
+	public void setFecha_llegada_visita(Date fecha_llegada_visita) {
+		this.fecha_llegada_visita = fecha_llegada_visita;
+	}
+
+	public Date getFecha_salida_visita() {
+		return fecha_salida_visita;
+	}
+
+	public void setFecha_salida_visita(Date fecha_salida_visita) {
+		this.fecha_salida_visita = fecha_salida_visita;
+	}
+
+	public Visitante getVisitante() {
+		return visitante;
+	}
+
+	public void setVisitante(Visitante visitante) {
+		this.visitante = visitante;
+	}
+
+	public Propietario getPropietario() {
+		return propietario;
+	}
+
+	public void setPropietario(Propietario propietario) {
+		this.propietario = propietario;
+	}
+	
+	
 }

@@ -1,7 +1,15 @@
 package com.proyecto;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+
+import com.proyecto.entity.Role;
+import com.proyecto.enums.RoleName;
+import com.proyecto.service.RoleService;
+import com.proyecto.service.UserService;
 
 @SpringBootApplication
 public class ProyectoGrupo02Application {
@@ -10,11 +18,7 @@ public class ProyectoGrupo02Application {
 		SpringApplication.run(ProyectoGrupo02Application.class, args);
 	}
 	
-//	@Bean
-//	PasswordEncoder passwordEncoder() {
-//		return new BCryptPasswordEncoder();
-//	}
-	
+//	Psdt: Ejecutar 1 sola ves
 //	@Autowired
 //	RoleService roleService;
 //	
@@ -25,19 +29,6 @@ public class ProyectoGrupo02Application {
 //			Role roleUser = new Role(RoleName.ROLE_USER);
 //			roleService.save(roleAdmin);
 //			roleService.save(roleUser);
-//			userService.saveRole(new Role(null, "ROLE_SUPER_ADMIN"));
-//			userService.saveRole(new Role(null, "ROLE_ADMIN"));
-//			userService.saveRole(new Role(null, "ROLE_USER"));			
-//			
-//			userService.saveUser(new User(null, "Renato", "renato@correo.com", "rbhairava", "12345", new ArrayList<>()));
-//			userService.saveUser(new User(null, "David", "david@correo.com", "david", "12345", new ArrayList<>()));
-//			userService.saveUser(new User(null, "Alonso", "alonso@correo.com", "alonso", "12345", new ArrayList<>()));
-//			userService.saveUser(new User(null, "Olinda", "olinda@correo.com", "olinda", "12345", new ArrayList<>()));
-//			
-//			userService.addRoleToUser("alonso", "ROLE_USER");
-//			userService.addRoleToUser("olinda", "ROLE_USER");
-//			userService.addRoleToUser("rbhairava", "ROLE_SUPER_ADMIN");
-//			userService.addRoleToUser("david", "ROLE_ADMIN");
 //		};
 //	}
 

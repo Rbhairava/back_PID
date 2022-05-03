@@ -2,6 +2,8 @@ package com.proyecto.jwt;
 
 import lombok.extern.slf4j.Slf4j;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.stereotype.Component;
@@ -17,6 +19,7 @@ import static com.proyecto.util.Security.*;
 @Component
 public class JwtEntryPoint implements AuthenticationEntryPoint {
 	
+	private final static Logger log = LoggerFactory.getLogger(JwtEntryPoint.class);	
 	
 	@Override
 	public void commence(HttpServletRequest request, HttpServletResponse response,
