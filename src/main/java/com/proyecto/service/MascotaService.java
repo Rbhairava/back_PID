@@ -8,5 +8,7 @@ public interface MascotaService {
 
 	public abstract List<Mascota> listaMascota();
 	
-	public abstract Mascota insertaActualizaMascota(Mascota obj);
+	public abstract Mascota insertMascota(Mascota obj);
+	
+//	public abstract Mascota insertaActualizaMascota(Mascota obj);
 }

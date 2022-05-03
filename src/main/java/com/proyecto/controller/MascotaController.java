@@ -36,21 +36,33 @@ public class MascotaController {
 	
 	@PostMapping
 	@ResponseBody
-	public ResponseEntity<Map<String, Object>> insertaMascota(@RequestBody Mascota obj) {
-		Map<String, Object> salida = new HashMap<>();
-		try {
-			Mascota objSalida = mascotaService.insertaActualizaMascota(obj);
-			if (objSalida == null) {
-				salida.put("mensaje", AppSettings.MENSAJE_REG_ERROR);
-			} else {
-				salida.put("mensaje", AppSettings.MENSAJE_REG_EXITOSO);
-			}
-		} catch (Exception e) {
-			e.printStackTrace();
-			salida.put("mensaje", AppSettings.MENSAJE_REG_ERROR);
+	public ResponseEntity<Mascota> insertMarca(@RequestBody Mascota obj) {
+		Mascota objOutput = mascotaService.insertMascota(obj);
+		
+		if (objOutput == null) {
+			return ResponseEntity.noContent().build();
+		} else {
+			return ResponseEntity.ok(objOutput);
 		}
-		return ResponseEntity.ok(salida);
 	}
+	
+//	@PostMapping
+//	@ResponseBody
+//	public ResponseEntity<Map<String, Object>> insertaMascota(@RequestBody Mascota obj) {
+//		Map<String, Object> salida = new HashMap<>();
+//		try {
+//			Mascota objSalida = mascotaService.insertaActualizaMascota(obj);
+//			if (objSalida == null) {
+//				salida.put("mensaje", AppSettings.MENSAJE_REG_ERROR);
+//			} else {
+//				salida.put("mensaje", AppSettings.MENSAJE_REG_EXITOSO);
+//			}
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//			salida.put("mensaje", AppSettings.MENSAJE_REG_ERROR);
+//		}
+//		return ResponseEntity.ok(salida);
+//	}
 
 	
 }
